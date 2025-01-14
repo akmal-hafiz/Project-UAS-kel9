@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Up Games</title>
+    <link rel="stylesheet" href="topup.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <h1>TOP.UP.DONG</h1>
+            </div>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Hot Games</a></li>
+                <li class="dropdown">
+                    <a href="#">Top Up <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Voucher Game</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Promo</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <a href="login.html">
+                    <button class="login-btn">Log In</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="topup-container">
+        <h2>MASUKAN USER ID</h2>
+        <div class="user-input">
+            <input type="text" placeholder="Masukan User ID">
+            <input type="text" placeholder="Zone ID">
+        </div>
+
+        <h2>PILIH NOMINAL TOP UP</h2>
+        <div class="diamonds-grid" id="diamond-options">
+            <div class="diamond-item" onclick="selectDiamond(this)">
+                <div class="diamond-image">
+                    
+                    <img src="DIAMOND-removebg-preview.png" alt="Diamond">
+                    <p>80 Diamond</p>
+                </div>
+                <p class="price">Rp.50.000</p>
+            </div>
+            <div class="diamond-item" onclick="selectDiamond(this)">
+                <div class="diamond-image">
+                    <img src="DIAMOND-removebg-preview.png" alt="Diamond">
+                    <p>100 Diamond</p>
+                </div>
+                <p class="price">Rp.100.000</p>
+            </div>
+            <div class="diamond-item" onclick="selectDiamond(this)">
+                <div class="diamond-image">
+                    <img src="DIAMOND-removebg-preview.png" alt="Diamond">
+                    <p>200 Diamond</p>
+                </div>
+                <p class="price">Rp.150.000</p>
+            </div>
+        </div>
+
+        <h2>PILIH METODE PEMBAYARAN YANG TERSEDIA</h2>
+        <div class="payment-methods">
+            <div class="payment-option">
+                <img src="GOPAY.jpg" alt="GoPay">
+                <span>GoPay</span>
+            </div>
+            <div class="payment-option">
+                <img src="DANA.jpg" alt="Dana">
+                <span>Dana</span>
+            </div>
+            <div class="payment-option">
+                <img src="shoope!.jpg" alt="ShopeePay">
+                <span>ShopeePay</span>
+            </div>
+        </div>
+
+        <!-- Buy Button -->
+        <div class="buy-button-container">
+            <button class="btn-buy" onclick="buyNow()">Buy</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TOP.UP.DONG. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle diamond selection
+        function selectDiamond(selected) {
+            const diamonds = document.querySelectorAll('.diamond-item');
+            diamonds.forEach(item => item.classList.remove('selected'));
+            selected.classList.add('selected');
+        }
+
+        // JavaScript for the Buy button
+        function buyNow() {
+            alert("Top-Up berhasil diproses!");
+        }
+    </script>
+</body>
+</html>

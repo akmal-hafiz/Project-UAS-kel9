@@ -1,0 +1,342 @@
+:root {
+  --color-1: #041831;
+  --color-2: #fff;
+  --color-3: #E627FF;
+  --color-4: #000;
+  --color-5: rgba(255, 255, 255, 0.5);
+  --color-6: greenyellow;
+}
+
+
+
+
+body {
+    width: 100%;
+    min-height: 100vh; /* Mengubah tinggi minimum menjadi 100vh untuk layar penuh */
+    background: var(--color-1);
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column; /* Menambahkan Flexbox agar konten dan footer tersusun vertikal */
+  }
+  
+
+
+/* Tombol Buy */
+.buy-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-buy {
+  background-color: #e627ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-buy:hover {
+  background-color: #041831;
+  transform: scale(1.05);
+}
+
+/* Diamond Selection */
+.diamond-item.selected {
+  background-color: var(--color-1);
+  color: white;
+  transform: scale(1.05);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #270458;
+    padding: 15px 30px;
+    width: 98%; /* Membuat navbar memenuhi lebar layar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Menempel di bagian atas layar */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-logo h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-links li {
+    position: relative;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar-links a:hover {
+    background-color: #3b0a72;
+    border-radius: 5px;
+  }
+  
+  .navbar-buttons .login-btn {
+    background-color: #e627ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .navbar-buttons .login-btn:hover {
+    background-color: #041831;
+    transform: scale(1.05);
+  }
+  
+  /* Dropdown Menu */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3b0a72;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li {
+    list-style: none;
+  }
+  
+  .dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #270458;
+    border-radius: 5px;
+  }
+    /* Responsif untuk layar kecil */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+    
+      .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    
+      .navbar-links li {
+        width: 100%;
+        text-align: left;
+      }
+    
+      .navbar-buttons {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+      }
+    
+      .navbar-buttons .login-btn {
+        width: 100%;
+      }
+    }
+    
+
+
+/* Container Utama */
+.topup-container {
+    max-width: 800px;
+    margin: 90px auto 0; /* Tambahkan margin atas agar tidak menutupi navbar */
+    padding: 20px;
+    color: white;
+    background-color: #041831;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Judul */
+.topup-container h2 {
+    font-size: 1.4em;
+    margin: 20px 0;
+    color: white;
+    text-align: center; /* Rata tengah */
+}
+
+/* Input User ID */
+.user-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.user-input input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    flex: 1;
+    font-size: 14px;
+}
+
+/* Grid Nominal Top-Up */
+.diamonds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.diamond-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.diamond-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.diamond-image img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #ff00ff;
+    font-weight: bold;
+}
+
+/* Metode Pembayaran */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.payment-option:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+.payment-option img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.payment-option span {
+    color: white;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 12px;
+    background-color: #270458;
+    margin-top: 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsif untuk Tablet */
+@media (max-width: 768px) {
+    .topup-container {
+        padding: 15px;
+    }
+
+    .user-input {
+        flex-direction: column;
+    }
+
+    .user-input input {
+        width: 100%;
+    }
+
+    .diamonds-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .payment-option span {
+        font-size: 14px;
+    }
+}
+
+/* Responsif untuk Ponsel */
+@media (max-width: 480px) {
+    .topup-container h2 {
+        font-size: 1.2em;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .payment-option {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .payment-option span {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+
