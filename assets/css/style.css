@@ -1,0 +1,900 @@
+/* Googlefont */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap');
+/* Googlefont */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #041831;
+  --color-2: #fff;
+  --color-3: #E627FF;
+  --color-4: #000;
+  --color-5: rgba(255, 255, 255, 0.5);
+  --color-6: greenyellow;
+}
+
+
+
+
+/* General styling for the games section */
+.games-section {
+  padding: 20px;
+  background-color: #1c1c3c;
+}
+
+.section-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Game container to allow horizontal scrolling */
+.game-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  
+}
+
+/* Styling for individual game cards */
+.game-card {
+  min-width: 48%;
+  max-width: 48%;
+  flex: 0 0 auto;
+  background-color: #2d2d5a;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-card img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.game-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.game-card .price {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.btn-buy {
+  background-color: #ff00ff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: #cc00cc;
+}
+
+
+
+header {
+  width: 85%;
+  flex: 1; /* Membuat header mengambil ruang yang tersisa */
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start; /* Aligns aside to the right */
+  width: 100%;
+}
+
+header aside {
+  width: 15%;
+  border-radius: 0px 10px 10px 0px; /* Ubah radius untuk sisi kanan */
+  background: #270458;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a1128;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #ff00ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Scrollable Game Container */
+.game-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll; /* Membuat scrollable secara horizontal */
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.game-container::-webkit-scrollbar {
+  height: 8px; /* Tinggi scrollbar */
+}
+
+.game-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.game-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px; /* Lebar tiap kartu game */
+  text-align: center;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.game-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.game-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.game-card .price {
+  color: #ff00ff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.game-card .btn-buy {
+  background-color: #0a1128;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+}
+
+.game-card:hover {
+  transform: translateY(-5px); /* Efek hover */
+}
+
+/* Fortnite Banner */
+.banner-section {
+  margin: 40px 0; /* Spasi vertikal tetap */
+  text-align: left; /* Geser konten ke kiri */
+}
+
+.fortnite-banner {
+  width: 100%;
+  max-width: 1000px; /* Ukuran maksimal banner */
+  display: block;
+  margin: 0 auto 0 0; /* Hapus margin auto kanan dan tambahkan margin kiri jika diperlukan */
+}
+
+
+/* Media Queries untuk Responsiveness */
+@media (max-width: 768px) {
+  .game-card {
+    width: 150px; /* Sesuaikan ukuran card pada mobile */
+  }
+  .fortnite-banner {
+    width: 90%; /* Sesuaikan ukuran banner pada mobile */
+  }
+}
+
+
+
+
+
+header aside h1 {
+  margin-left: 5px;
+  color: var(--color-2);
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+header aside button {
+  display: block;
+  padding: 15px 20px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--color-3);
+  color: var(--color-2);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+header aside button:hover {
+  background: var(--color-1);
+  transform: scale(1.05);
+}
+
+header aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+header aside ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+header aside ul li a {
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--color-5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+header aside ul li a:hover {
+  color: var(--color-6);
+}
+
+header aside .trending {
+  width: 100%;
+  margin-top: 20px;
+}
+
+header aside .trending h5 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+header aside .trending .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+header aside .trending .cards .card {
+  background: linear-gradient(145deg, var(--primary), var(--secondary));
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+header aside .trending .cards .card .img_trending img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header aside .trending .cards .card .content {
+  margin-left: 10px;
+}
+
+header aside .trending .cards .card .content h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+header aside .trending .cards .card .content p {
+  font-size: 0.9rem;
+  color: #041831;
+  font-weight: bold;
+}
+
+
+
+/* Aside Right Styling */
+.aside-right {
+  background-color: #0a1128;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Mengubah posisi menjadi fixed */
+  top: 70px; /* Menempatkan aside tepat di bawah navbar (sesuaikan dengan tinggi navbar) */
+  right: 20px; /* Menempatkan aside di sebelah kanan layar */
+  z-index: 999; /* Agar berada di atas konten lain jika diperlukan */
+}
+
+/* Search Box Styling */
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.aside-title {
+  color: #ff00ff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Menu List Styling */
+.aside-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Ensure no additional spacing */
+}
+
+.aside-menu li {
+  margin-bottom: 16px;
+}
+
+.aside-menu a {
+  display: block;
+  padding: 12px; /* Add some padding for a better touch target */
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #0a1128;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.aside-menu a:hover {
+  border-color: #ff00ff;
+  color: #ff00ff;
+}
+
+/* Optional: Add some space to the bottom of the aside-right section */
+.aside-right {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* Efek hover untuk kartu "GTA V" */
+header aside .trending .cards .card {
+  position: relative;
+  overflow: hidden;
+  background: #270458;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header aside .trending .cards .card:hover {
+  transform: scale(1.02);
+}
+
+/* Efek hover untuk gambar di dalam kartu */
+header aside .trending .cards .card .img_trending img {
+  transition: transform 0.3s ease;
+}
+
+header aside .trending .cards .card:hover .img_trending img {
+  transform: rotate(5deg) scale(1.1); /* Memutar dan memperbesar gambar */
+}
+
+/* Efek hover untuk teks di dalam kartu */
+header aside .trending .cards .card .content h6,
+header aside .trending .cards .card .content p {
+  transition: color 0.3s ease-in-out;
+}
+
+header aside .trending .cards .card:hover .content h6 {
+  color: var(--color-6); /* Ubah warna judul saat dihover */
+}
+
+header aside .trending .cards .card:hover .content p {
+  color: #e627ff; /* Ubah warna teks harga saat dihover */
+}
+
+/* bagian footer */
+.footer-left {
+  background-color: #2a2a40;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  margin-top: auto; /* Agar footer selalu berada di bawah konten */
+}
+
+.footer-left h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff0077;
+}
+
+.footer-left p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.footer-left p:last-child {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Responsif untuk layar kecil (smartphone) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Atur header menjadi kolom */
+    height: auto;
+  }
+
+  header aside {
+    width: 100%; /* Buat aside memenuhi lebar layar */
+    padding: 10px;
+  }
+
+  header aside .trending {
+    margin-top: 10px;
+  }
+
+  header aside .trending .cards {
+    flex-direction: row; /* Atur kartu secara horizontal */
+    overflow-x: auto; /* Tambahkan scroll horizontal jika terlalu banyak kartu */
+    gap: 10px;
+  }
+
+  header aside .trending .cards .card {
+    flex-shrink: 0; /* Mencegah kartu mengecil */
+    width: 150px; /* Tetapkan lebar kartu */
+  }
+
+  header aside .trending .cards .card .img_trending img {
+    width: 40px; /* Sesuaikan ukuran gambar */
+    height: 40px;
+  }
+
+  header aside .trending .cards .card .content h6 {
+    font-size: 0.9rem; /* Sesuaikan ukuran font judul */
+  }
+
+  header aside .trending .cards .card .content p {
+    font-size: 0.8rem; /* Sesuaikan ukuran font harga */
+  }
+}
+
+header aside .trending .cards::-webkit-scrollbar{
+  width: 7px;
+  background: rgb(red, green, blue);
+}
+
+
+
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.games-section {
+  width: 75%;
+}
+
+.aside-right {
+  width: 20%;
+  background-color: #270458;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.game-card {
+  background-color: #2a2a40;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.game-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.game-card h3 {
+  color: #fff;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.price {
+  color: #e627ff;
+  font-size: 16px;
+}
+
+.btn-buy {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #041831;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: #e627ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsif untuk layar sangat kecil (maksimum 480px) */
+@media (max-width: 480px) {
+  header aside h1 {
+    font-size: 1.5rem; /* Perkecil ukuran judul */
+  }
+
+  header aside button {
+    font-size: 1rem; /* Perkecil tombol */
+    padding: 10px 15px;
+  }
+
+  header aside ul li a {
+    font-size: 0.8rem; /* Sesuaikan ukuran font daftar */
+  }
+
+  header aside .trending h5 {
+    font-size: 1.2rem; /* Sesuaikan ukuran font bagian trending */
+  }
+}
+
+
+
+
+/* CSS untuk Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #270458;
+  padding: 15px 30px;
+  width: 100%; /* Membuat navbar memenuhi lebar layar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Menempel di bagian atas layar */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-logo h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  background-color: #3b0a72;
+  border-radius: 5px;
+}
+
+.navbar-buttons .login-btn {
+  background-color: #e627ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-buttons .login-btn:hover {
+  background-color: #041831;
+  transform: scale(1.05);
+}
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #3b0a72;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #270458;
+  border-radius: 5px;
+}
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .navbar-links li {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .navbar-buttons {
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-buttons .login-btn {
+      width: 100%;
+    }
+  }
+  
+  /* Responsif untuk layar sangat kecil (480px ke bawah) */
+  @media (max-width: 480px) {
+    .navbar-logo h1 {
+      font-size: 20px;
+    }
+  
+    .navbar-links a {
+      font-size: 14px;
+    }
+  
+    .navbar-buttons .login-btn {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+  
+  .games1 {
+    padding: 20px;
+    background-color: #041831;
+  }
+  
+  
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .game-card {
+    background-color: #270458;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .game-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  .game-card .price {
+    color: #e627ff;
+    font-weight: bold;
+  }
+  
+  .game-card .btn-buy {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e627ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .game-card .btn-buy:hover {
+    background-color: #041831;
+    transform: scale(1.05);
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+
+
+  .most-played {
+    padding: 20px;
+    background-color: #041831;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 500px; /* Membatasi tinggi bagian untuk scroll */
+    overflow: hidden;
+  }
+  
+  .most-played h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e627ff;
+  }
+  
+  .games-container {
+    max-height: 400px; /* Membatasi tinggi kontainer */
+    overflow-y: auto; /* Scroll secara vertikal */
+  }
+  
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .game-card {
+    background-color: #270458;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .game-info {
+    padding: 10px;
+  }
+  
+  .game-info h3 {
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .game-info p {
+    font-size: 1rem;
+    color: #e627ff;
+    font-weight: bold;
+  }
+  
+  .load-more-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e627ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .load-more-btn:hover {
+    background-color: #d017e0;
+  }
+  
